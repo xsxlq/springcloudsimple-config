@@ -1,0 +1,23 @@
+server: 
+  prot: 8201
+spring:
+  profiles: dev #开发环境
+  application:
+    name: springcloud-simple-config-dev-client
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:7001/eureka/
+---
+server: 
+  prot: 8202
+spring:
+  profiles: test
+  application:
+    name: springcloud-simple-config-test-client
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:7001/eureka/
+
+#文件格式：UTF-8
